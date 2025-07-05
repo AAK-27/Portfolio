@@ -115,7 +115,7 @@ input, select, textarea {
 	}
 
 		a:hover {
-			color: #43bff0 !important;
+			color: rgb(250, 150, 50) !important;
 		}
 
 		a img {
@@ -1993,7 +1993,7 @@ input, select, textarea {
 	.wrapper {
 		background-image: url("images/bg.png");
 		/* box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1); */
-		padding: 8em 0 8em 0;
+		padding: 5em 0 5em 0;
 		text-align: center;
 	}
 
@@ -2017,6 +2017,7 @@ input, select, textarea {
 			background-color: #303030;
 			color: #999;
 			text-shadow: -1px -1px 0px #181818;
+			padding: 2em 0 2em 0;
 		}
 
 			.wrapper.style4 h1, .wrapper.style4 h2, .wrapper.style4 h3, .wrapper.style4 h4, .wrapper.style4 h5, .wrapper.style4 h6 {
@@ -2110,7 +2111,7 @@ input, select, textarea {
 	}
 
 	#top {
-		padding: 10em 0 10em 0;
+		padding: 8em 0 3em 0;
 		text-align: left;
 	}
 
