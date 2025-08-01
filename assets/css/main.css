@@ -1677,15 +1677,10 @@ input, select, textarea {
 	input[type="reset"],
 	button,
 	.button {
-		/* background-image: url("images/bg.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
-		background-image: url("images/bg.png"), linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)); */
 		-moz-transition: background-color .2s ease-in-out;
 		-webkit-transition: background-color .2s ease-in-out;
 		-ms-transition: background-color .2s ease-in-out;
 		transition: background-color .2s ease-in-out;
-		-webkit-appearance: none;
 		position: relative;
 		display: inline-block;
 		color: #fff !important;
@@ -1991,7 +1986,7 @@ input, select, textarea {
 		}
 
 		.icon.featured {
-			color: #EA8A95;
+			color: rgb(250, 150, 50);
 			display: block;
 			margin: 0 0 1.5em 0;
 			cursor: default;
@@ -2017,7 +2012,9 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 {
-			background-color: hsl(30 30% 5%);
+			background-image: none;
+			background-color:hsl(30 50% 5%);
+			color: hsl(30, 5% 0%);
 			/* text-shadow: 1px 1px 0px #fff; */
 		}
 
@@ -2198,6 +2195,17 @@ input, select, textarea {
 				color: #777;
 			}
 
+#fire {
+	/* position: relative; */
+	display: block;
+	width: 100%;
+	width: 20em;
+	height: 20em;
+	margin: 0;
+	box-sizing: inherit;
+	background-color: inherit;
+}
+
 /* Large */
 
 	@media screen and (max-width: 1280px) {
@@ -2239,6 +2247,12 @@ input, select, textarea {
 					height: 24em;
 					margin: 0;
 				}
+		
+		#fire {
+			width: 24em;
+			height: 24em;
+			margin: 0;
+		}
 
 	}
 
@@ -2256,6 +2270,10 @@ input, select, textarea {
 				#top .image {
 					margin: 0 auto 2em auto;
 				}
+
+		#fire {
+			margin: 0 auto 2em auto;
+		}
 
 	}
 
@@ -2446,6 +2464,12 @@ input, select, textarea {
 				margin: 0;
 			}
 
+		#fire {
+			width: 15em;
+			height: 15em;
+			margin-bottom: 0;
+		}
+
 		/* Copyright */
 
 			#copyright {
@@ -2466,3 +2490,28 @@ input, select, textarea {
 					}
 
 	}
+
+/* Fire Effect */
+.square {
+	--rotation: 45deg;
+	--animation-time: 750ms;
+	--deltax: 0px;
+	--deltay: -50px;
+	position: absolute;
+	background-color: initial;
+	margin: 0px;
+	width: 30px;
+	height: 30px;
+	opacity: 70%;
+	rotate: 0deg;
+	transition: all var(--animation-time) ease-out;
+	z-index: 1;
+	/* background-color: aliceblue; */
+}
+
+.square.fade {
+	/* rotate: 360deg; */
+	transform: translate(var(--deltax), var(--deltay)) rotate(var(--rotation));
+	opacity: 0%;
+	z-index: 5;
+}
